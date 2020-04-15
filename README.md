@@ -4,10 +4,10 @@
 
 ## 安装
 
-1. 将 libAGV_api.so 拷贝到系统链接库的默认路径
+1. 将 dmtx.so.zip 文件解压，并同 libAGV_api.so 一起拷贝到系统链接库的默认路径
 
    ```bash
-   cp libAGV_api.so /usr/local/lib
+   cp libAGV_api.so libdmtx.so* /usr/local/lib
    ```
 
 ## 代码运行
