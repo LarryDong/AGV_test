@@ -3,7 +3,7 @@
 
 int main(void){
 	
-	Mat src=imread("/home/pi/codeGit/AGV_test/pictures/series/2085.bmp", 0);	
+	Mat src=imread("/home/pi/Desktop/case/0.bmp", 0);	
 
 	AGV_System_Config config;	// 进行AGV相关配置
 	// necessary settings. 以下配置是必须的，包括：校准图片路径，图片分辨率

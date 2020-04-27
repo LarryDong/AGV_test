@@ -46,23 +46,23 @@ using namespace cv;
 */
 #define DM_BlockIndex_0 01
 #define DM_BlockIndex_1 02
-#define DM_BlockIndex_2 04
-#define DM_BlockIndex_3 03
-#define DM_CheckString "000000"
+#define DM_BlockIndex_2 03
+#define DM_BlockIndex_3 04
+#define DM_CheckString "0000"
 
-// 01000000001/2/3/4
+// 0001 0000 01
 #define DM_Data_Length 10
 #define DM_Data_BlockIndex_Begin	8
 #define DM_Data_BlockIndex_End		9
 #define DM_Data_LabelIndex_Begin		0
-#define DM_Data_LabelIndex_End		1
-#define DM_Data_Check_Begin			2
+#define DM_Data_LabelIndex_End		3
+#define DM_Data_Check_Begin			4
 #define DM_Data_Check_End			7
 
 // Label layout information.
 
-#define Label_Tag_Size	91
-#define Label_Tag_Gap	17
+#define Label_Tag_Size	20
+#define Label_Tag_Gap	10
 
 
 // show image
