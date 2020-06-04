@@ -51,7 +51,7 @@ public:
 
 private:
 	const int bin_threshold = 128;
-	const int valid_tag_contour_min = 400;		// use absolute value now.
+	const int valid_tag_contour_min = 300;		// use absolute value now.
 	const int valid_tag_contour_max = 750;		// use absolute value now.
 	const int valid_tag_contour_ratio = 50;
 	const int tag_roi_margin = 10;
