@@ -27,11 +27,20 @@ public:
 	AGV_System_Config();
 	bool checkConfig();
 
-	Size resolution_;
+	Size resolution_;			// default: 640x400
 	string calib_image_;
 	Rect roi_;
-	bool show_image_flag_;
-	int bin_thresh_;
+	bool show_image_flag_;		// Show image. default: false
+	bool show_more_info_flag_;	// Show more info. defalut: false.
+	
+	int valid_contour_max_;
+	int valid_contour_min_;
+
+    // params for (adaptive) threshold
+    int bin_thresh_;                // set the fixed threshold. default: 90;
+    bool is_adaptive_threshold_;    // check if adaptive. default: false
+    int adaptive_threshold_low_, adaptive_threshold_high_;      // adaptive threshold between these two values. default: [1,999]
+    int adaptive_size_, adaptive_offset_;   // block size and constant value for offset.
 };
 
 
@@ -57,12 +66,19 @@ public:
 	Vec4i states_;		// which block is decoded
 	int id_;				// label id
 	double time_ms_;		// decode time in ms.
+	int valid_contour_max_, valid_contour_min_;
 
+	
 private:
-	Size resolution_;	// default: 640x400
+	Size resolution_;	
 	Rect roiRect_;
-	bool show_image_flag_;		// default: false
+	bool show_image_flag_;
+	bool show_more_info_flag_;
 	PhotoCalib pc_;		// photo calib.
+    
+    // Use global variables to pass the value now...
+    // bool is_adaptive_;        // check if adaptive.
+    // int thLow_, thHigh_;      // adaptive threshold between these two values.
 };
 
 

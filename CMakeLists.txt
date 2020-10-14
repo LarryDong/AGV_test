@@ -5,7 +5,7 @@ PROJECT(AGV_test)
 
 MESSAGE(STATUS "Build ${PROJECT_NAME}...")
 
-find_package(OpenCV 4 REQUIRED)
+find_package(OpenCV 3 REQUIRED)
 
 ADD_EXECUTABLE(AGV_test demo.cpp)
 
